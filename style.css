@@ -1,0 +1,239 @@
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+:root{
+    --dark-color:#000000;
+    --gray-color:#333;
+    --gray-color1:#9a9a9a;
+    --success-color:rgb(78, 207, 18);
+    --success-color1:rgb(45, 136, 3);
+    --light-color:#ffffff;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background:var(--light-color);
+    padding:1.5rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .2rem .5rem var(--gray-color);
+}
+header .logo{
+    font-size: 3rem;
+    /* text-decoration-color:var(--success-color),var(--success-color1); */
+    font-weight: bolder;
+    color: var(--success-color1);
+}
+header .navbar a{
+    font-size:1.8rem;
+    padding:0 1.5rem;
+    color:var(--dark-color);
+}
+
+header .navbar a:hover{
+    color:var(--success-color1);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color:var(--dark-color);
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color:var(--success-color1);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color:var(--gray-color);
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid var(--dark-color);
+    display: none;
+}
+.cardContainer,.cardContainer1{
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+}
+.cardContainer{
+    margin-top: 10%;
+}
+.card{
+    flex-basis: 20%;
+    margin: 10px 0px;
+    text-align: center;
+    padding: 20px 0px;
+    background: white;
+    box-shadow: 0px 0px 10px 3px rgb(21, 20, 20);
+}
+.card-text h3{
+    padding: 10px 0px;
+}
+.card-text p{
+    font-size: 13px;
+    padding: 10px;
+}
+.cardContainer button,.cardContainer1 button{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+.card:hover h3,
+.card:hover p {
+    color: var(--light-color);
+}
+.card:hover button {
+    background-color: var(--success-color);
+    color:var(--light-color) ;
+}
+.footer{
+    background-color: var(--dark-color);
+}
+.footer .box-container{
+    margin: 20px ;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color:var(--gray-color);
+    font-size: 2.5rem;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    padding:1rem 0;
+    display: block;
+    color:var(--gray-color1);
+}
+
+.footer .box-container .box a:hover{
+    color:var(--success-color);
+}
+
+.footer .box-container .box  img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding:1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color:var(--gray-color);
+    border-top: .1rem solid var(--gray-color1);
+    padding-bottom:2rem;
+}
+
+.footer .credit span{
+    color:var(--success-color);
+}
+
+
+
+@media (max-width:991px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+    .cardContainer,.cardContainer1{
+        width: 100%;
+        flex-direction: column;
+        margin-top:16% ;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+}
+
+
+
+@media (max-width:768px){
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position:absolute;
+        top:100%; left:0; right:0;
+        background:var(--light-color);
+        border-top: .1rem solid var(--gray-color1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background:var(--light-color);
+        border:.1rem solid var(--gray-color1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+    
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+    
+}
